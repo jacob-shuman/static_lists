@@ -1,0 +1,16 @@
+export const ANIMALS = [
+  'monkey',
+  'rhino',
+  'elephant',
+  'gorilla',
+  'ant',
+  'spider',
+  'vulture',
+  'mosquito',
+  'giraffe',
+  'flamingo',
+  'goose',
+  'moose',
+  'swan',
+  'pigeon',
+];

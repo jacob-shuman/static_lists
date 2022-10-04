@@ -1,5 +1,5 @@
 [build]
-command = "pnpm build"
+command = "npm run build"
 
 [[plugins]]
 package = "@netlify/plugin-lighthouse"

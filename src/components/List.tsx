@@ -45,6 +45,7 @@ export const List: React.FC<ListProps> = ({ name, values }) => {
         </button>
       </div>
 
+      {/* TODO: cap list size at x values */}
       {!minimized && (
         <SyntaxHighlighter language="javascript" style={funky} wrapLongLines>
           {list}

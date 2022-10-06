@@ -19,7 +19,7 @@ export const NavButtons = () => {
           <button
             className={tw(
               `focus:outline-none px-4 py-2`,
-              style === "upper" && tw`text-white bg-black font-bold`
+              style === "upper" && tw`font-bold text-white bg-black`
             )}
             onClick={() => update("upper")}
           >
@@ -31,7 +31,7 @@ export const NavButtons = () => {
           <button
             className={tw(
               `focus:outline-none px-4 py-2`,
-              style === "lower" && tw`text-white bg-black font-bold`
+              style === "lower" && tw`font-bold text-white bg-black`
             )}
             onClick={() => update("lower")}
           >
@@ -43,7 +43,7 @@ export const NavButtons = () => {
           <button
             className={tw(
               `focus:outline-none px-4 py-2`,
-              style === "title" && tw`text-white bg-black font-bold`
+              style === "title" && tw`font-bold text-white bg-black`
             )}
             onClick={() => update("title")}
           >

@@ -13,7 +13,7 @@ const lists = await Astro.glob(
 <Layout>
   <Nav client:idle />
 
-  <main class={tw(`flex flex-col gap-y-16 justify-center items-center py-8`)}>
+  <main class={tw(`flex flex-col gap-y-16 justify-center items-center py-8 px-4`)}>
     {lists.sort((x, y) => x.name.localeCompare(y.name)).map((list) => <List {...list} name={slugify(list.name, {replacement:'_', lower:true})} client:idle />)}
   </main>
 </Layout>

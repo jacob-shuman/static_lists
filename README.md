@@ -8,8 +8,9 @@ If you would like to create a new list simply add a new json file to the data di
 
 ```json
 {
-  "name": "...",
-  "values": ["...", "...", "..."]
+  "name": "...", // Required
+  "description": "", // Optional
+  "values": ["...", "...", "..."] // Required
 }
 ```
 

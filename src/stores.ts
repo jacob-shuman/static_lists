@@ -1,8 +1,9 @@
 import create from "zustand";
+import vanillaCreate from "zustand/vanilla";
 
 export type Style = "upper" | "lower" | "title";
 
-interface StyleStoreProps {
+export interface StyleStoreProps {
   style: Style;
   update: (style: Style) => void;
 }

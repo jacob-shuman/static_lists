@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav";
+import Syntax from "../../components/Syntax";
+import tw from "clsx";
+import { ListProps } from "../../components/List";
+import slugify from "slugify";
+
+export async function getStaticPaths() {
+  const lists = await Astro.glob<ListProps>("../../data/*.json");
+
+  return lists.map((list) => ({
+    params: { slug: slugify(list.name, { replacement: "_", lower: true }) },
+    props: { list },
+  }));
+}
+
+const list = Astro.props.list as ListProps;
+const { name, description, values } = list;
+const slug = slugify(name, { replacement: "_", lower: true });
+---
+
+<Layout>
+  <Nav client:idle />
+
+  <main
+    class={tw(`flex flex-col gap-y-2 justify-center items-center py-8 px-4`)}
+  >
+    <!-- TODO: add options to copy random chunks of data -->
+    <section class={tw(`text-left w-full max-w-3xl`)}>
+      <h1 class={tw(`text-xl font-bold`)}>
+        {slug}
+      </h1>
+
+      {
+        description && description.trim().length > 0 && (
+          <p class={tw(`opacity-50 text-sm italic`)}>{description}</p>
+        )
+      }
+
+      <p class={tw(`opacity-50 text-sm`)}>{values.length} elements</p>
+
+      <!-- TODO: add copy button -->
+
+      <Syntax values={values} client:idle />
+    </section>
+  </main>
+</Layout>

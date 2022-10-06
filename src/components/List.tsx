@@ -1,65 +1,24 @@
 import React, { useState } from "react";
 import tw from "clsx";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-// TODO: consider adding a theme selector and use the duotone themes
-import SyntaxHighlighterStyle from "react-syntax-highlighter/dist/cjs/styles/prism/funky";
+import Syntax from "../components/Syntax";
 import Icons from "react-icons/io5/index";
-import { Style, useStyle } from "../stores";
+import { useStyle } from "../stores";
+import { stringifyList } from "../utils";
 
-interface ListProps {
+export interface ListProps {
   name: string;
   values: string[];
+  description?: string;
 }
 
-const styleValue = (
-  style: Style,
-  value: string | number,
-  quotes: boolean
-): string | number => {
-  if (typeof value === "number") {
-    return value;
-  }
-
-  let formattedValue = value;
-
-  switch (style) {
-    case "upper":
-      formattedValue = value.toUpperCase();
-      break;
-    case "title":
-      formattedValue = value
-        .toLowerCase()
-        .split(" ")
-        .map((w) => w.at(0).toUpperCase() + w.slice(1))
-        .join(" ");
-      break;
-  }
-
-  return quotes ? `"${formattedValue}"` : formattedValue;
-};
-
-const stringifyList = (style: Style, list: string[], short = false) =>
-  "[" +
-  list.map(
-    (v, i) =>
-      "\n\t" +
-      `${styleValue(style, v, (short && i < list.length - 1) || !short)}`
-  ) +
-  "\n]";
-
-export const List: React.FC<ListProps> = ({ name, values }: ListProps) => {
+export const List: React.FC<ListProps> = ({
+  name,
+  values,
+  description,
+}: ListProps) => {
   const { style } = useStyle((state) => state);
   const [minimized, setMinimized] = useState(false);
-  const maxElements = 10;
   const list = stringifyList(style, values);
-  const shortList = stringifyList(
-    style,
-    [
-      ...values.slice(0, maxElements),
-      `// +${values.length - maxElements} more`,
-    ],
-    true
-  );
 
   return (
     <section className={tw(`flex flex-col gap-y-2`, `w-full max-w-3xl`)}>
@@ -75,29 +34,27 @@ export const List: React.FC<ListProps> = ({ name, values }: ListProps) => {
           )}
         </button>
 
-        <h2 className={tw(`text-2xl font-bold`)}>{name}</h2>
+        <div className={tw(`flex-1`)}>
+          <a href={`/list/${name}`} className={tw(`lg:text-xl font-bold`)}>
+            {name}
+          </a>
 
-        <p className={tw(`opacity-50 text-sm text-left`, `flex-1`)}>
-          {values.length} elements
-        </p>
+          {description && description.trim().length > 0 && (
+            <p className={tw(`opacity-50 text-sm italic`)}>{description}</p>
+          )}
+
+          <p className={tw(`opacity-50 text-sm`)}>{values.length} elements</p>
+        </div>
 
         <button
           className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
-          onClick={() => navigator.clipboard.writeText(list)}
+          onClick={async () => await navigator.clipboard.writeText(list)}
         >
           <Icons.IoCopy size="1.5rem" />
         </button>
       </div>
 
-      {!minimized && (
-        <SyntaxHighlighter
-          language="javascript"
-          style={SyntaxHighlighterStyle}
-          wrapLongLines
-        >
-          {values.length > maxElements ? shortList : list}
-        </SyntaxHighlighter>
-      )}
+      {!minimized && <Syntax values={values} clamp />}
     </section>
   );
 };

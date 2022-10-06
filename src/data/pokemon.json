@@ -1,0 +1,11 @@
+{
+  "name": "pokemon",
+  "values": [
+    "bulbasaur",
+    "blastoise",
+    "charmander",
+    "charizard",
+    "pikachu",
+    "squirtle"
+  ]
+}

@@ -5,6 +5,8 @@ import { useStyle } from "../stores";
 import { stringifyList } from "../utils";
 import tw from "clsx";
 
+// TODO: replace "" with \"\"
+// TODO: fix issue with style selector not working when there is a space in a value name
 // TODO: consider adding a theme selector and use the duotone themes
 export const Syntax: React.FC<{
   values: string[];

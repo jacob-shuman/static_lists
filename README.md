@@ -2,7 +2,7 @@
 
 [![netlify status badge](https://img.shields.io/netlify/032193b3-e66f-40f0-96c1-f52d73a28297?logo=netlify&style=for-the-badge)](https://www.netlify.com/)
 [![powered by badge](https://img.shields.io/static/v1?label=Powered%20by&message=Astro&logo=astro&color=FF5D01&style=for-the-badge)](https://astro.build/)
-[![styled with badge](https://img.shields.io/static/v1?label=Styled%20with&message=Tailwindcss&logo=tailwind&color=06B6D4&style=for-the-badge)](https://tailwindcss.com/)
+[![styled with badge](https://img.shields.io/static/v1?label=Styled%20with&message=Tailwindcss&logo=tailwindcss&color=06B6D4&style=for-the-badge)](https://tailwindcss.com/)
 
 > If you would like to contribute, please feel free to follow the [contributing](#contributing) section below and submit a pull request.
 

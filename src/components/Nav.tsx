@@ -2,7 +2,6 @@ import tw from "clsx";
 import { useStyle } from "../stores";
 
 export const Nav = () => {
-  // TODO: implement style in list examples
   const { style, update } = useStyle((state) => state);
 
   return (

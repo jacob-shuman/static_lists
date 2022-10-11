@@ -1,4 +1,4 @@
-# static_lists
+![banner](banner.svg)
 
 [![netlify status badge](https://img.shields.io/netlify/032193b3-e66f-40f0-96c1-f52d73a28297?logo=netlify&style=for-the-badge)](https://www.netlify.com/)
 [![powered by badge](https://img.shields.io/static/v1?label=Powered%20by&message=Astro&logo=astro&color=FF5D01&style=for-the-badge)](https://astro.build/)

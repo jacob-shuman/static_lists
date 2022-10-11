@@ -9,10 +9,14 @@ import tw from "clsx";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Static Lists</title>
+    <title>static_lists</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=tabular@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class={tw`font-mono`}>
+    <div class={tw`font-tabular font-[500]`}>
       <slot />
     </div>
   </body>

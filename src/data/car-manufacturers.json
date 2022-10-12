@@ -1,0 +1,28 @@
+{
+  "name": "car_manufacturers",
+  "values": [
+    "hyundai",
+    "ford",
+    "honda",
+    "nissan",
+    "tesla",
+    "jeep",
+    "toyota",
+    "lamborghini",
+    "ferrari",
+    "porsche",
+    "mercedes-benz",
+    "mclaren",
+    "bmw",
+    "audi",
+    "aston martin",
+    "rolls-royce",
+    "bentley",
+    "jaguar",
+    "bugatti",
+    "subaru",
+    "lexus",
+    "mazda",
+    "volkswagen"
+  ]
+}

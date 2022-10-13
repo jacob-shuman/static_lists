@@ -1,0 +1,15 @@
+{
+  "name": "canadian_provinces",
+  "values": [
+    "alberta",
+    "british columbia",
+    "manitoba",
+    "new brunswick",
+    "newfoundland and labrador",
+    "nova scotia",
+    "ontario",
+    "prince edward island",
+    "quebec",
+    "saskatchewan"
+  ]
+}

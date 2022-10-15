@@ -10,7 +10,7 @@ const lists = await Astro.glob<ListProps>("../data/*.json");
 ---
 
 <Layout>
-  <Nav client:idle />
+  <Nav client:visible />
 
   <main
     class={tw(`flex flex-col gap-y-16 justify-center items-center py-8 px-4`)}
@@ -22,7 +22,7 @@ const lists = await Astro.glob<ListProps>("../data/*.json");
           <List
             {...list}
             name={slugify(list.name, { replacement: "_", lower: true })}
-            client:load
+            client:visible
           />
         ))
     }

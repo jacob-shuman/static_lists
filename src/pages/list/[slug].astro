@@ -21,7 +21,7 @@ const slug = slugify(name, { replacement: "_", lower: true });
 ---
 
 <Layout>
-  <Nav client:idle />
+  <Nav client:visible />
 
   <main
     class={tw(`flex flex-col gap-y-2 justify-center items-center py-8 px-4`)}
@@ -42,7 +42,7 @@ const slug = slugify(name, { replacement: "_", lower: true });
 
       <!-- TODO: add copy button -->
 
-      <Syntax values={values} client:idle />
+      <Syntax values={values} client:visible />
     </section>
   </main>
 </Layout>

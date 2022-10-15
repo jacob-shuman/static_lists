@@ -17,17 +17,18 @@ export const List: React.FC<ListProps> = ({
   description,
 }: ListProps) => {
   const { style } = useStyle((state) => state);
-  const [minimized, setMinimized] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const list = stringifyList(style, values);
 
   return (
     <section className={tw(`flex flex-col gap-y-2`, `w-full max-w-3xl`)}>
       <div className={tw(`flex gap-x-4 items-center text-center`)}>
         <button
+          aria-label={collapsed ? "expand list" : "collapse list"}
           className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
-          onClick={() => setMinimized(!minimized)}
+          onClick={() => setCollapsed(!collapsed)}
         >
-          {minimized ? (
+          {collapsed ? (
             <Icons.IoAdd size="1.5rem" />
           ) : (
             <Icons.IoRemove size="1.5rem" />
@@ -47,6 +48,7 @@ export const List: React.FC<ListProps> = ({
         </div>
 
         <button
+          aria-label="copy list"
           className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
           onClick={async () => await navigator.clipboard.writeText(list)}
         >
@@ -54,7 +56,7 @@ export const List: React.FC<ListProps> = ({
         </button>
       </div>
 
-      {!minimized && <Syntax values={values} clamp />}
+      {!collapsed && <Syntax values={values} clamp />}
     </section>
   );
 };

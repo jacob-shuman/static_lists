@@ -21,10 +21,10 @@ export const Syntax: React.FC<{
         <code className="font-tabular bg-black shadow-[black_-0.3em_0px_0px_0.3em,black_0.3em_0px_0px_0.3em]">
           <span className="text-gray-400">[</span>
           {styleValues(style, list).map((v, i) => (
-            <>
+            <div key={`${v}-${i}-${list.length}`} className={tw(`inline`)}>
               <span className="text-[yellow]">{`\n\t"${v}"`}</span>
               {i < list.length - 1 && <span className="text-gray-400">,</span>}
-            </>
+            </div>
           ))}
 
           {shorten && (

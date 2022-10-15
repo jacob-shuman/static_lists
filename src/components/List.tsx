@@ -41,10 +41,12 @@ export const List: React.FC<ListProps> = ({
           </a>
 
           {description && description.trim().length > 0 && (
-            <p className={tw(`opacity-50 text-sm italic`)}>{description}</p>
+            <p className={tw(`opacity-60 text-sm italic`)}>{description}</p>
           )}
 
-          <p className={tw(`opacity-50 text-sm`)}>{values.length} elements</p>
+          <p className={tw(`opacity-60 text-sm`)}>
+            {values.length} element{values.length > 1 ? "s" : ""}
+          </p>
         </div>
 
         <button

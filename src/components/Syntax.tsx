@@ -1,8 +1,6 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import SyntaxHighlighterStyle from "react-syntax-highlighter/dist/cjs/styles/prism/funky";
 import { useStyle } from "../stores";
-import { stringifyList } from "../utils";
+import { styleValues } from "../utils";
 import tw from "clsx";
 
 // TODO: replace "" with \"\"
@@ -14,22 +12,32 @@ export const Syntax: React.FC<{
   max?: number;
 }> = ({ values, clamp = false, max = 10 }) => {
   const { style } = useStyle((state) => state);
-  const list = stringifyList(style, values);
-  const shortenedList = stringifyList(
-    style,
-    [...values.slice(0, max), `// +${values.length - max} more`],
-    true
-  );
+  const shorten = clamp && values.length > max;
+  const list = shorten ? values.slice(0, 10) : values;
 
   return (
     <div className={tw(`w-full max-w-3xl`)}>
-      <SyntaxHighlighter
-        language="javascript"
-        style={SyntaxHighlighterStyle}
-        wrapLongLines
-      >
-        {clamp && values.length > max ? shortenedList : list}
-      </SyntaxHighlighter>
+      <pre className="bg-gray-200 px-4 py-2">
+        <code className="font-tabular bg-black shadow-[black_-0.3em_0px_0px_0.3em,black_0.3em_0px_0px_0.3em]">
+          <span className="text-gray-400">[</span>
+          {styleValues(style, list).map((v, i) => (
+            <>
+              <span className="text-[yellow]">{`\n\t"${v}"`}</span>
+              {i < list.length - 1 && <span className="text-gray-400">,</span>}
+            </>
+          ))}
+
+          {shorten && (
+            <>
+              <span className="text-gray-400">{`\n\t// +${
+                values.length - 10
+              } more`}</span>
+            </>
+          )}
+
+          <span className="text-gray-400">{"\n]"}</span>
+        </code>
+      </pre>
     </div>
   );
 };

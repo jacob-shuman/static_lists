@@ -1,0 +1,21 @@
+{
+  "name": "@static_lists/data",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Lists of random static data",
+  "homepage": "https://github.com/jacob-shuman/static_lists#readme",
+  "author": "Jacob Shuman",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacob-shuman/static-lists.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jacob-shuman/static-lists/issues"
+  },
+  "keywords": [
+    "static",
+    "data",
+    "lists"
+  ]
+}

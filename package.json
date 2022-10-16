@@ -9,13 +9,6 @@
     "web": "pnpm --filter './packages/web' run",
     "w": "pnpm web"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacob-shuman/static-lists.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jacob-shuman/static-lists/issues"
-  },
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^4.0.1"
   }

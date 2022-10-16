@@ -3,6 +3,7 @@
   "author": "Jacob Shuman",
   "homepage": "https://github.com/jacob-shuman/static-lists#readme",
   "version": "1.0.0",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",

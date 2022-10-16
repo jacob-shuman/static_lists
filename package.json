@@ -6,7 +6,6 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "web": "pnpm --filter './packages/web' run",
     "w": "pnpm web"
   },

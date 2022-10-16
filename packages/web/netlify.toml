@@ -1,6 +1,6 @@
 [build]
 base = "packages/web/"
-command = "pnpm w build"
+command = "npm run w build"
 publish = "dist"
 
 [[plugins]]

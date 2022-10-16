@@ -1,6 +1,6 @@
 [build]
 base = "packages/web/"
-command = "npm run build"
+command = "cd packages/web && npm run build"
 publish = "dist"
 
 [[plugins]]

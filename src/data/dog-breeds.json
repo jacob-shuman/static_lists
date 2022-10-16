@@ -1,0 +1,13 @@
+{
+  "name": "dog_breeds",
+  "values": [
+    "husky",
+    "poodle",
+    "golden retriever",
+    "black labrador",
+    "chocolate labrador",
+    "cocker spaniel",
+    "shitzu",
+    "pit bull"
+  ]
+}

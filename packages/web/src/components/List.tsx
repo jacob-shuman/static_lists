@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import tw from "clsx";
-import Syntax from "../components/Syntax";
+import Syntax from "./Syntax";
 import Icons from "react-icons/io5/index";
 import { useStyle } from "../stores";
 import { stringifyList } from "../utils";

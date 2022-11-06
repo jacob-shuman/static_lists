@@ -1,0 +1,25 @@
+{
+  "name": "philosophers",
+  "values": [
+    "thomas aquinas",
+    "aristotle",
+    "confucius",
+    "rené descartes",
+    "ralph waldo emerson",
+    "michel foucault",
+    "david hume",
+    "immanuel kant",
+    "søren kierkegaard",
+    "lao-tzu",
+    "john locke",
+    "niccolo machiavelli",
+    "karl marx",
+    "john stuart mill",
+    "friedrich nietzsche",
+    "plato",
+    "jean-jacques rousseau",
+    "jean-paul sartre",
+    "socrates",
+    "ludwig wittgenstein"
+  ]
+}

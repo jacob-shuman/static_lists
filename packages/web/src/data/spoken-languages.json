@@ -1,0 +1,16 @@
+{
+  "name:": "spoken_languages",
+  "values": [
+    "english",
+    "french",
+    "spanish",
+    "german",
+    "italian",
+    "portuguese",
+    "russian",
+    "chinese",
+    "japanese",
+    "korean",
+    "klingon"
+  ]
+}

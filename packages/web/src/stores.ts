@@ -1,5 +1,4 @@
 import create from "zustand";
-import vanillaCreate from "zustand/vanilla";
 
 export type Style = "upper" | "lower" | "title";
 

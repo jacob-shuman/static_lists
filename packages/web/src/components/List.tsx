@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import tw from "clsx";
 import Syntax from "./Syntax";
 import Icons from "react-icons/io5/index";
-import { useStyle } from "../stores";
-import { stringifyList } from "../utils";
+import ListCopyButton from "./ListCopyButton";
+
+export const isValidList = (list: ListProps): boolean =>
+  list.name &&
+  list.name.trim().length > 0 &&
+  list.values &&
+  list.values.length > 0;
 
 export interface ListProps {
   name: string;
@@ -11,14 +16,9 @@ export interface ListProps {
   description?: string;
 }
 
-export const List: React.FC<ListProps> = ({
-  name,
-  values,
-  description,
-}: ListProps) => {
-  const { style } = useStyle((state) => state);
+export const List: React.FC<ListProps> = (list) => {
+  const { name, values, description } = list;
   const [collapsed, setCollapsed] = useState(false);
-  const list = stringifyList(style, values);
 
   return (
     <section className={tw(`flex flex-col gap-y-2`, `w-full max-w-3xl`)}>
@@ -49,13 +49,7 @@ export const List: React.FC<ListProps> = ({
           </p>
         </div>
 
-        <button
-          aria-label="copy list"
-          className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
-          onClick={async () => await navigator.clipboard.writeText(list)}
-        >
-          <Icons.IoCopy size="1.5rem" />
-        </button>
+        <ListCopyButton list={list} />
       </div>
 
       {!collapsed && <Syntax values={values} clamp />}

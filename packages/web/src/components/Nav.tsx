@@ -1,13 +1,30 @@
 import tw from "clsx";
 import { useStyle } from "../stores";
 
-export const Nav = () => {
+type ReactButtonProps = JSX.IntrinsicElements["button"];
+
+interface ButtonProps extends ReactButtonProps {
+  active?: boolean;
+}
+
+const Button: React.FC<ButtonProps> = ({ active = false, ...props }) => (
+  <button
+    className={tw(
+      `focus:outline-none px-4 py-2`,
+      active && tw`font-bold text-white bg-black`
+    )}
+    {...props}
+  />
+);
+
+const Nav = () => {
   const { style, update } = useStyle((state) => state);
 
   return (
     <nav
       className={tw(
-        `p-8 pb-0 flex flex-col justify-center items-center gap-y-4`
+        `p-8 pb-0`,
+        `flex flex-col justify-center items-center gap-y-4`
       )}
     >
       <a href="/" className={tw(`text-2xl font-bold`)}>
@@ -16,39 +33,21 @@ export const Nav = () => {
 
       <ul className={tw(`flex justify-center`)}>
         <li>
-          <button
-            className={tw(
-              `focus:outline-none px-4 py-2`,
-              style === "lower" && tw`font-bold text-white bg-black`
-            )}
-            onClick={() => update("lower")}
-          >
+          <Button active={style === "lower"} onClick={() => update("lower")}>
             lowercase
-          </button>
+          </Button>
         </li>
 
         <li>
-          <button
-            className={tw(
-              `focus:outline-none px-4 py-2`,
-              style === "title" && tw`font-bold text-white bg-black`
-            )}
-            onClick={() => update("title")}
-          >
+          <Button active={style === "title"} onClick={() => update("title")}>
             TitleCase
-          </button>
+          </Button>
         </li>
 
         <li>
-          <button
-            className={tw(
-              `focus:outline-none px-4 py-2`,
-              style === "upper" && tw`font-bold text-white bg-black`
-            )}
-            onClick={() => update("upper")}
-          >
+          <Button active={style === "upper"} onClick={() => update("upper")}>
             UPPERCASE
-          </button>
+          </Button>
         </li>
       </ul>
     </nav>

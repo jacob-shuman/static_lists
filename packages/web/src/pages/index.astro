@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav";
-import List, { ListProps } from "../components/List";
+import List, { isValidList, ListProps } from "../components/List";
 import tw from "clsx";
 import slugify from "slugify";
 
-// TODO: filter out all invalidly formatted files
-const lists = await Astro.glob<ListProps>("../data/*.json");
+const lists = (await Astro.glob<ListProps>("../data/*.json")).filter(
+  isValidList
+);
 ---
 
 <Layout>

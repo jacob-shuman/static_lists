@@ -25,7 +25,7 @@ export const List: React.FC<ListProps> = (list) => {
       <div className={tw(`flex gap-x-4 items-center text-center`)}>
         <button
           aria-label={collapsed ? "expand list" : "collapse list"}
-          className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
+          className={tw(`focus:outline-none text-gray-500 hover:text-black`)}
           onClick={() => setCollapsed(!collapsed)}
         >
           {collapsed ? (
@@ -41,10 +41,10 @@ export const List: React.FC<ListProps> = (list) => {
           </a>
 
           {description && description.trim().length > 0 && (
-            <p className={tw(`opacity-60 text-sm italic`)}>{description}</p>
+            <p className={tw(`text-gray-500 text-sm italic`)}>{description}</p>
           )}
 
-          <p className={tw(`opacity-60 text-sm`)}>
+          <p className={tw(`text-gray-500 text-sm`)}>
             {values.length} element{values.length > 1 ? "s" : ""}
           </p>
         </div>

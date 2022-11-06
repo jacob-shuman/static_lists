@@ -36,11 +36,11 @@ const slug = slugify(name, { replacement: "_", lower: true });
 
         {
           description && description.trim().length > 0 && (
-            <p class={tw(`opacity-50 text-sm italic`)}>{description}</p>
+            <p class={tw(`text-gray-500 text-sm italic`)}>{description}</p>
           )
         }
 
-        <p class={tw(`opacity-50 text-sm`)}>{values.length} elements</p>
+        <p class={tw(`text-gray-500 text-sm`)}>{values.length} elements</p>
       </div>
 
       <ListCopyButton list={list} client:visible />

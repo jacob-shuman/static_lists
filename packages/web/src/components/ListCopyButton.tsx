@@ -15,7 +15,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ list }) => {
   return (
     <button
       aria-label="copy list"
-      className={tw(`focus:outline-none opacity-50 hover:opacity-100`)}
+      className={tw(`focus:outline-none text-gray-500 hover:text-black`)}
       onClick={async () => await navigator.clipboard.writeText(copyValue)}
     >
       <Icons.IoCopy size="1.5rem" />

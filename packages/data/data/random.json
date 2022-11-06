@@ -1,0 +1,5 @@
+{
+  "name": "random",
+  "description": "random objects, holidays, and more",
+  "values": ["wallet", "spork", "christmas", "microwave", "phone", "oven"]
+}

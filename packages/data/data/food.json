@@ -1,0 +1,25 @@
+{
+  "name": "food",
+  "values": [
+    "pasta",
+    "pizza",
+    "steak",
+    "chicken",
+    "fries",
+    "turkey",
+    "sandwich",
+    "burger",
+    "fish",
+    "squid",
+    "sushi",
+    "salmon",
+    "duck",
+    "pork",
+    "ham",
+    "bacon",
+    "salad",
+    "lettuce",
+    "tomatoe",
+    "potato"
+  ]
+}

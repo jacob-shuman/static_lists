@@ -1,0 +1,23 @@
+{
+  "name": "pizza_toppings",
+  "values": [
+    "bacon",
+    "black olives",
+    "ham",
+    "chicken",
+    "ground beef",
+    "ground sausage",
+    "green peppers",
+    "bell peppers",
+    "garlic",
+    "green olives",
+    "mushrooms",
+    "pepperoni",
+    "red onions",
+    "sausage",
+    "tomatoes",
+    "pears",
+    "pineapples",
+    "roasted grapes"
+  ]
+}

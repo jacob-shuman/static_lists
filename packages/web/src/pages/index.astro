@@ -4,8 +4,10 @@ import Nav from "../components/Nav";
 import List, { ListProps } from "../components/List";
 import tw from "clsx";
 import slugify from "slugify";
+import { all } from "@static_lists/data";
 
-// TODO: filter out all invalidly formatted files
+// all();
+// // TODO: filter out all invalidly formatted files
 const lists = await Astro.glob<ListProps>("../data/*.json");
 ---
 

@@ -1,10 +1,11 @@
 {
   "name": "@static_lists/data",
   "version": "1.0.0",
-  "license": "MIT",
   "description": "Lists of random static data",
   "homepage": "https://github.com/jacob-shuman/static_lists#readme",
   "author": "Jacob Shuman",
+  "main": "./dist/index.js",
+  "license": "MIT",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -17,5 +18,11 @@
     "static",
     "data",
     "lists"
-  ]
+  ],
+  "dependencies": {
+    "globby": "^13.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }

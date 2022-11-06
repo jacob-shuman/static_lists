@@ -1,0 +1,14 @@
+{
+  "name": "spoken_languages",
+  "values": [
+    "english",
+    "spanish",
+    "french",
+    "hebrew",
+    "greek",
+    "klingon",
+    "portuguese",
+    "norwegian",
+    "swahili"
+  ]
+}

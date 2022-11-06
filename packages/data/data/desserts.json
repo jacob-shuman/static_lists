@@ -1,0 +1,21 @@
+{
+  "name": "desserts",
+  "values": [
+    "cake",
+    "cupcake",
+    "cake pop",
+    "brownie",
+    "cookie",
+    "cheesecake",
+    "tart",
+    "flan",
+    "crème brûlée",
+    "ice cream",
+    "sorbet",
+    "ice cream sandwich",
+    "pie",
+    "eclair",
+    "crème puff",
+    "popsicle"
+  ]
+}

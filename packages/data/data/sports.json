@@ -1,0 +1,16 @@
+{
+  "name": "sports",
+  "values": [
+    "basketball",
+    "baseball",
+    "soccer",
+    "football",
+    "hockey",
+    "rugby",
+    "cricket",
+    "tennis",
+    "bowling",
+    "badminton",
+    "figure skating"
+  ]
+}

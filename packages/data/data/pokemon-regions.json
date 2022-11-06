@@ -1,0 +1,15 @@
+{
+  "name": "pokemon_regions",
+  "values": [
+    "kanto",
+    "johto",
+    "hoenn",
+    "sinnoh",
+    "unova",
+    "kalos",
+    "alola",
+    "galar",
+    "hisui",
+    "paldea"
+  ]
+}

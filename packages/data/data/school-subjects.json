@@ -1,0 +1,16 @@
+{
+  "name": "school_subjects",
+  "values": [
+    "math",
+    "art",
+    "english",
+    "geography",
+    "history",
+    "science",
+    "biology",
+    "chemistry",
+    "gym",
+    "music",
+    "cooking"
+  ]
+}

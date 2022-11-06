@@ -10,6 +10,10 @@
     "w": "pnpm web"
   },
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^4.0.1"
+    "@netlify/plugin-lighthouse": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "prettier": "^2.7.1"
   }
 }

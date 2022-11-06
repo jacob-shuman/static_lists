@@ -1,0 +1,38 @@
+{
+    "Add clsx imports": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twi",
+        "body": "import tw from 'clsx';",
+        "description": "Add twind import"
+    },
+    "Add tailwind class": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "tw",
+        "body": "tw`${0:}`",
+        "description": "Add className prop with tw"
+    },
+    "Add tailwind classlist": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twl",
+        "body": "tw(${0:})",
+        "description": "Add className prop with tw"
+    },
+    "Add className with tailwind": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "ctw",
+        "body": "className={tw`${0:}`}",
+        "description": "Add className prop with tw"
+    },
+    "Add className with tailwind list": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "ctwl",
+        "body": "className={tw(`${0:}`)}",
+        "description": "Add className prop with tw"
+    },
+    "Add new JSX element with tailwind": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twc",
+        "body": "<${1:} className={${0:}}>\n</>",
+        "description": "Add new component with twind className"
+    },
+}

@@ -1,5 +1,5 @@
 {
-  "name:": "spoken_languages",
+  "name": "spoken_languages",
   "values": [
     "english",
     "french",
@@ -11,6 +11,10 @@
     "chinese",
     "japanese",
     "korean",
-    "klingon"
+    "klingon",
+    "hebrew",
+    "greek",
+    "norwegian",
+    "swahili"
   ]
 }

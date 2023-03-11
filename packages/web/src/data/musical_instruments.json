@@ -1,0 +1,21 @@
+{
+  "name": "musical_instruments",
+  "description": "A collection of various musical instruments from around the world.",
+  "values": [
+    "piano",
+    "guitar",
+    "drums",
+    "violin",
+    "saxophone",
+    "trumpet",
+    "accordion",
+    "harp",
+    "flute",
+    "didgeridoo",
+    "bagpipes",
+    "erhu",
+    "sitar",
+    "taiko drum",
+    "steelpan"
+  ]
+}

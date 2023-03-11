@@ -1,0 +1,21 @@
+{
+  "name": "natural_landmarks",
+  "description": "A collection of unique and beautiful natural landmarks and attractions around the world.",
+  "values": [
+    "grand prismatic spring",
+    "zhangjiajie national forest park",
+    "salar de uyuni",
+    "cappadocia",
+    "giant's causeway",
+    "ha long bay",
+    "plitvice lakes national park",
+    "petra",
+    "mount everest",
+    "uluru (ayers rock)",
+    "waitomo glowworm caves",
+    "chocolate hills",
+    "blue hole",
+    "socotra island",
+    "pamukkale thermal pools"
+  ]
+}

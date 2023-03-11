@@ -1,0 +1,21 @@
+{
+  "name": "types_of_trees",
+  "description": "A collection of different types of trees found around the world.",
+  "values": [
+    "oak",
+    "maple",
+    "pine",
+    "cedar",
+    "spruce",
+    "birch",
+    "cherry",
+    "willow",
+    "magnolia",
+    "dogwood",
+    "redwood",
+    "sequoia",
+    "sycamore",
+    "cypress",
+    "elm"
+  ]
+}

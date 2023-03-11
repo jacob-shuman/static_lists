@@ -1,0 +1,21 @@
+{
+  "name": "gemstones",
+  "description": "A collection of various gemstones found around the world.",
+  "values": [
+    "diamond",
+    "ruby",
+    "sapphire",
+    "emerald",
+    "amethyst",
+    "topaz",
+    "peridot",
+    "garnet",
+    "aquamarine",
+    "opal",
+    "moonstone",
+    "turquoise",
+    "jade",
+    "onyx",
+    "citrine"
+  ]
+}

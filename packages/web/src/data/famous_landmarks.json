@@ -1,0 +1,21 @@
+{
+  "name": "famous_landmarks",
+  "description": "A collection of famous landmarks and monuments from various countries and cultures.",
+  "values": [
+    "eiffel tower",
+    "great wall of china",
+    "taj mahal",
+    "statue of liberty",
+    "big ben",
+    "leaning tower of pisa",
+    "colosseum",
+    "christ the redeemer",
+    "golden gate bridge",
+    "petronas twin towers",
+    "sydney opera house",
+    "burj khalifa",
+    "acropolis",
+    "machu picchu",
+    "chichen itza"
+  ]
+}

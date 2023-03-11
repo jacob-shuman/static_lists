@@ -1,0 +1,21 @@
+{
+  "name": "famous_paintings",
+  "description": "A collection of famous paintings from various artists and art movements throughout history.",
+  "values": [
+    "mona lisa",
+    "the starry night",
+    "the persistence of memory",
+    "the scream",
+    "girl with a pearl earring",
+    "the birth of venus",
+    "guernica",
+    "american gothic",
+    "the kiss",
+    "water lilies",
+    "the night watch",
+    "the great wave off kanagawa",
+    "the last supper",
+    "les demoiselles d'avignon",
+    "the garden of earthly delights"
+  ]
+}

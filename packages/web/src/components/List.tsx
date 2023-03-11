@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import tw from "clsx";
 import Syntax from "./Syntax";
-import Icons from "react-icons/io5/index";
+import Icons from "react-icons/tb/index";
 import ListCopyButton from "./ListCopyButton";
 
 export const isValidList = (list: ListProps): boolean =>
@@ -29,9 +29,9 @@ export const List: React.FC<ListProps> = (list) => {
           onClick={() => setCollapsed(!collapsed)}
         >
           {collapsed ? (
-            <Icons.IoAdd size="1.5rem" />
+            <Icons.TbPlus size="1.5rem" />
           ) : (
-            <Icons.IoRemove size="1.5rem" />
+            <Icons.TbMinus size="1.5rem" />
           )}
         </button>
 

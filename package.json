@@ -17,6 +17,6 @@
     "url": "https://github.com/jacob-shuman/static-lists/issues"
   },
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^4.0.1"
+    "@netlify/plugin-lighthouse": "^4.1.1"
   }
 }
